@@ -1,0 +1,35 @@
+@using deliveryfast.Models
+@model List<Cadastro>
+@{
+    ViewData["Title"] = "Pedidos Feitos";
+}
+<h3>@ViewData["Title"]</h3>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped" style="background-color: yellow;">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>Tipo de Pão</th>
+                    <th>Quantidade</th>
+                </tr>
+            <tbody>
+                @foreach (Cadastro u in Model)
+                    {
+                    <tr>
+                        <td>@u.Nome</td>
+                        <td>@u.Endereco</td>
+                        <td>@u.Telefone</td>
+                        <td>@u.tipopao</td>
+                        <td>@u.Quantidade</td>
+                    </tr>
+                    }
+            </tbody>
+            </thead>
+        </table>
+
+    </div>
+
+</div>
